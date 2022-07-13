@@ -110,6 +110,12 @@ a:active {
   width: 50%;
 }
 
+.info2 {
+  font-size: 110%;
+  font-weight: bold;
+  width: 50%;
+}
+
 #use-webkit {
   background: repeating-linear-gradient(
     45deg,
@@ -155,14 +161,15 @@ a:active {
 }
 
 #svg-anchor::before {
+  font-style: italic;
   content: 'Rendered SVG:';
   vertical-align: top;
   -webkit-margin-start: 1em;
 }
 
 #svg-anchor svg {
-  width: 576px;
-  height: 576px;
+  width: 512px;
+  height: 512px;
 }
 
 input:not(:checked) ~ .limitation {
