@@ -53,26 +53,29 @@ limitations under the License. -->
 </head>
 
 <body>
-<h1 class="title"><u>Skiafier - Generate .icon files.</u></h1>
+<h1 class="title"><u>Skiafier - Generate .icon files.</u>&nbsp;<img title="Skiafier Logo" alt="Skiafier Logo" style="width: 48px; margin-bottom: -12px;" src="thumb.png"></h1>
 <button id="darkbutton" title="Toggle Dark/Light Mode">Toggle Dark/Light Mode</button>
 <hr class="line">
 <div id="use-webkit" hidden>
-<p class="warn"><em>This tool probably doesn't work in this browser. Try <a href="https://www.chromium.org/getting-involved/download-chromium/">Chromium</a> or <a href="https://thorium.rocks/">Thorium</a>.</em></p>
+<p class="warn"><em>This tool probably doesn't work in this browser. Try <a rel="noopener" target="_blank" href="https://www.chromium.org/getting-involved/download-chromium/">Chromium</a> or <a rel="noopener" target="_blank" href="https://thorium.rocks/">Thorium</a>.</em></p>
 </div>
-<p class="info">Purpose: This program converts .svg icons to .icon format, used in the native UI of <a href="https://www.chromium.org/">Chromium</a> based browsers. .icon is a vector format that passes instructions directly to <a href="https://skia.org/">Skia</a>. For more information, see > <a href="https://chromium.googlesource.com/chromium/src/+/main/components/vector_icons/README.md">Here</a>.</p>
+<div title="Info">
+<p class="info">Purpose: This program converts .svg icons to .icon format, used in the native UI of <a title="Chromium.org" rel="noopener" target="_blank" href="https://www.chromium.org/">Chromium</a> based browsers. .icon is a vector format that passes instructions directly to <a title="Skia Website" target="_blank" rel="noopener" href="https://skia.org/">Skia</a>.</p>
+<p class="info2">For more information about vector icons, see > <a title="Vector Icons Readme" rel="noopener" target="_blank" href="https://chromium.googlesource.com/chromium/src/+/main/components/vector_icons/README.md">Here</a>. You can view the source of this <a title="Skiafier Source" rel="noopener" target="_blank" href="https://github.com/Alex313031/skiafier">Here</a>.<br>
+You can view .icon files with <a title="Vector Icons Web App" rel="noopener" target="_blank" href="https://thorium.rocks/misc/vector-icon-app">This</a> Web App, or <a title="Chromium Vector Icon Painter Extension" rel="noopener" target="_blank" href="https://chrome.google.com/webstore/detail/chromium-vector-icon-pain/cnlndebkegcfnbiknohgneobakigplhf">This</a> Chromium Extension I made.</p>
 
-<p class="caveat">Caveat emptor! This program makes a lot of assumptions. Its
+<p class="caveat"><em>Caveat emptor!</em> This program makes a lot of assumptions. Its
 output is just a starting point; you may have to manipulate it further.</p>
 
-<p>Strongly consider pre-processing the SVG source with <a
-href="https://jakearchibald.github.io/svgomg/">Jake Archibald’s SVGOMG tool</a>
-(a web interface to <a href="https://github.com/svg/svgo/">the SVGO SVG
+<p>Note: Strongly consider pre-processing the SVG source with Jake Archibald’s <a title="SVGMG Tool" rel="noopener" target="_blank" href="https://jakearchibald.github.io/svgomg/">SVGOMG tool</a><br>
+(a web interface to <a title="SVGO Source" target="_blank" rel="noopener" href="https://github.com/svg/svgo/">the SVGO SVG
 optimizer</a>).</p>
+</div>
 
 <div id="top-stuff">
   <div id="input-stuff">
-    <p>Paste your SVG source below and then <button id="go-button" title="Skiafy!">Skiafy!</button></p>
-    <p>Options:</p>
+    <p><b>Paste your SVG source below and then <button id="go-button" title="Skiafy!">Skiafy!</button></b></p>
+    <p><em>Options:</em></p>
     <p>
       <label><input id="flip-x" type="checkbox"> Flip on <var>x</var> axis</label><br/>
       <label><input id="flip-y" type="checkbox"> Flip on <var>y</var> axis</label><br/>
@@ -84,13 +87,13 @@ optimizer</a>).</p>
     </p>
     <p>
       Translate (applies after flip):<br/>
-      <input class="input" id="transform-x" placeholder="x"><br/>
-      <input class="input" id="transform-y" placeholder="y">
+      <input title="Translate x" class="input" id="transform-x" placeholder="x"><br/>
+      <input title="Translate y" class="input" id="transform-y" placeholder="y">
     </p>
-    <textarea class="input" id="user-input"></textarea>
+    <textarea title="Input" class="input" id="user-input"></textarea>
     <div>
-      <span>Skiafied:</span>
-      <pre id="output-span">Skiafied output will be here</pre>
+      <span><em>Skiafied:</em></span>
+      <pre title="Output" id="output-span">Skiafied .icon output will be here</pre>
     </div>
   </div>
   <div id="svg-anchor">
